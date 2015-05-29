@@ -24,10 +24,10 @@ public class MainPresenter {
     }
 
     public void detachView() {
-        mView = null;
+        mView = null; // release reference of view
     }
 
     public void onDoClicked() {
-        mUseCase.execute();
+        mUseCase.execute(); // doing long work
     }
 }

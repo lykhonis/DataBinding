@@ -4,8 +4,10 @@
 
     <data>
 
+        <!-- import View to refer to visibility constants -->
         <import type="android.view.View" />
 
+        <!-- define view model -->
         <variable
             name="model"
             type="com.vl.android.databinding.MainViewModel" />
@@ -16,6 +18,7 @@
         android:layout_height="match_parent"
         android:orientation="vertical">
 
+        <!-- bind text of view model to the textview, bind visibility to loading -->
         <TextView
             android:id="@+id/text"
             android:layout_width="wrap_content"
@@ -24,6 +27,7 @@
             android:textSize="40sp"
             android:visibility="@{model.loading ? View.INVISIBLE : View.VISIBLE}" />
 
+        <!-- bind visibility to loading -->
         <Button
             android:id="@+id/button"
             android:layout_width="wrap_content"
@@ -33,6 +37,7 @@
             android:visibility="@{model.loading ? View.INVISIBLE : View.VISIBLE}"
             tools:ignore="HardcodedText" />
 
+        <!-- bind visibility to loading -->
         <ProgressBar
             android:id="@+id/progress"
             android:layout_width="wrap_content"

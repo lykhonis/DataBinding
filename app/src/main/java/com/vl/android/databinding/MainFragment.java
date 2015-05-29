@@ -17,16 +17,21 @@ public class MainFragment extends Fragment {
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        // create presenter, it should be cached to handle configuration changes
+        // but for sake of example, it does not
         mPresenter = new MainPresenter();
     }
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
+        // inflate layout, bind fields and etc
         FragmentBinding binding = DataBindingUtil.inflate(inflater,
                                                           R.layout.fragment,
                                                           container,
                                                           false);
+        // bind ViewModel
         binding.setModel(mViewModel = new MainViewModel());
+        // bind click listener
         binding.button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
