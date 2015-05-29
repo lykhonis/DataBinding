@@ -1,0 +1,17 @@
+.gradle
+/local.properties
+/.idea/workspace.xml
+/.idea/libraries
+.DS_Store
+/build
+/captures
+gradlew
+app/build
+.idea
+gradlew.bat
+local.properties
+gradle
+DataBinding.iml
+hs_err_pid21585.log
+build
+app/app.iml
